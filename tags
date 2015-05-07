@@ -1,0 +1,45 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BUFFER_SIZE_LOG_FILE	CLLogger.h	7;"	d
+CLExective	CLExecutive.h	/^class CLExective {$/;"	c
+CLExecutiveFunctionProvider	CLExecutiveFunctionProvider.h	/^class CLExecutiveFunctionProvider {$/;"	c
+CLLogger	CLLogger.cpp	/^CLLogger::CLLogger()$/;"	f	class:CLLogger
+CLLogger	CLLogger.h	/^class CLLogger {$/;"	c
+CLStatus	CLStatus.cpp	/^CLStatus::CLStatus(const CLStatus &s):m_clReturnCode(m_lReturnCode),m_clErrorCode(m_lErrorCode)$/;"	f	class:CLStatus
+CLStatus	CLStatus.cpp	/^CLStatus::CLStatus(long lReturnCode , long lErrorCode):m_clReturnCode(m_lReturnCode),m_clErrorCode(m_lErrorCode)$/;"	f	class:CLStatus
+CLStatus	CLStatus.h	/^class CLStatus {$/;"	c
+CLThread	CLThread.cpp	/^CLThread::CLThread(CLExecutiveFunctionProvider* pExecutiveFunctionProvider):CLExective(pExecutiveFunctionProvider)$/;"	f	class:CLThread
+CLThread	CLThread.h	/^class CLThread :public CLExective {$/;"	c
+Flush	CLLogger.cpp	/^CLStatus CLLogger::Flush()$/;"	f	class:CLLogger
+GetInstance	CLLogger.cpp	/^CLLogger* CLLogger::GetInstance()$/;"	f	class:CLLogger
+IsSuccess	CLStatus.cpp	/^bool CLStatus::IsSuccess()$/;"	f	class:CLStatus
+LOG_FILE_NAME	CLLogger.h	5;"	d
+MAX_SIZE	CLLogger.h	6;"	d
+OnProcessExit	CLLogger.cpp	/^void CLLogger::OnProcessExit()$/;"	f	class:CLLogger
+Run	CLThread.cpp	/^CLStatus CLThread::Run(void* pContext)$/;"	f	class:CLThread
+StartFunctionOfThread	CLThread.cpp	/^void* CLThread::StartFunctionOfThread(void* pThis)$/;"	f	class:CLThread
+WaitForDeath	CLThread.cpp	/^CLStatus CLThread::WaitForDeath()$/;"	f	class:CLThread
+WriteLog	CLLogger.cpp	/^CLStatus CLLogger::WriteLog (const char* pstrMsg , long lErrorCode)$/;"	f	class:CLLogger
+WriteLogMsg	CLLogger.cpp	/^CLStatus CLLogger::WriteLogMsg(const char* pstrMsg , long lErrorCode)$/;"	f	class:CLLogger
+__CLLOGGER_H__	CLLogger.h	2;"	d
+__CLSTATUS_H_	CLStatus.h	2;"	d
+__CLTHRAED_H__	CLThread.h	2;"	d
+__CL_EXECTIVE_H__	CLExecutive.h	2;"	d
+__CL_EXECUTIVE_FUNCTION_PROVIDER__	CLExecutiveFunctionProvider.h	2;"	d
+m_ThreadID	CLThread.h	/^                pthread_t m_ThreadID;$/;"	m	class:CLThread
+m_bFlagForProcessExit	CLLogger.h	/^               bool m_bFlagForProcessExit;               $/;"	m	class:CLLogger
+m_clErrorCode	CLStatus.h	/^                const long &m_clErrorCode;$/;"	m	class:CLStatus
+m_clReturnCode	CLStatus.h	/^                const long &m_clReturnCode;$/;"	m	class:CLStatus
+m_fd	CLLogger.h	/^               int m_fd;$/;"	m	class:CLLogger
+m_lErrorCode	CLStatus.h	/^                long m_lErrorCode;$/;"	m	class:CLStatus
+m_lReturnCode	CLStatus.h	/^                long m_lReturnCode;$/;"	m	class:CLStatus
+m_nUsedBytesForBuffer	CLLogger.h	/^               unsigned int m_nUsedBytesForBuffer;$/;"	m	class:CLLogger
+m_pContext	CLThread.h	/^                void *m_pContext;$/;"	m	class:CLThread
+m_pExecutiveFunctionProvider	CLExecutive.h	/^		CLExecutiveFunctionProvider* m_pExecutiveFunctionProvider;$/;"	m	class:CLExective
+m_pLog	CLLogger.cpp	/^CLLogger* CLLogger::m_pLog = NULL;$/;"	m	class:CLLogger	file:
+m_pLog	CLLogger.h	/^               static CLLogger *m_pLog;$/;"	m	class:CLLogger
+m_pLogBuffer	CLLogger.h	/^               char *m_pLogBuffer;$/;"	m	class:CLLogger

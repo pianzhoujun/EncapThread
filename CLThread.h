@@ -2,11 +2,13 @@
 #define __CLTHRAED_H__
 
 #include "CLStatus.h"
+#include "CLExecutive.h"
+#include "CLExecutiveFunctionProvider.h"
 #include <pthread.h>
 
-class CLThread {
+class CLThread :public CLExecutive {
         public:
-                CLThread();
+                explicit CLThread(CLExecutiveFunctionProvider* pExecutiveFunctionProvider);
                 virtual ~CLThread();
                 CLStatus Run(void* m_pContext = 0);
                 CLStatus WaitForDeath();

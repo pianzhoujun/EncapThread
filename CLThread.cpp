@@ -1,6 +1,11 @@
 #include "CLThread.h"
 #include "CLLogger.h"
 
+CLThread::CLThread(CLExecutiveFunctionProvider* pExecutiveFunctionProvider):CLExecutive(pExecutiveFunctionProvider)
+{
+
+}
+
 CLStatus CLThread::Run(void* pContext)
 {
         m_pContext = pContext;
@@ -24,6 +29,6 @@ CLStatus CLThread::WaitForDeath()
 void* CLThread::StartFunctionOfThread(void* pThis)
 {
         CLThread *pThreadThis = (CLThread*)pThis;
-        CLStatus s = pThreadThis->RunThreadFunction();
+        CLStatus s = pThreadThis->m_pExecutiveFunctionProvider->RunExecutiveFunction(pThreadThis->m_pContext);
         return (void*)s.m_clReturnCode;
 }

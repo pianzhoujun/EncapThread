@@ -8,7 +8,7 @@
 class CLThread :public CLExecutive {
         public:
         	explicit CLThread(CLCoordinator *pCoordinator);
-                virtual ~CLThread();
+                virtual ~CLThread(){};
                 virtual CLStatus Run(void* m_pContext = 0);
                 virtual CLStatus WaitForDeath();
                 

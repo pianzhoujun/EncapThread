@@ -8,7 +8,7 @@ class CLCoordinator;
 class CLExecutive {
 	public:
 		explicit CLExecutive(CLCoordinator* pCoordinator):m_pCoordinator(pCoordinator) {};
-		virtual ~CLExecutive();
+		virtual ~CLExecutive(){};
 		virtual CLStatus Run(void *pContext = 0) = 0;
 		virtual CLStatus WaitForDeath() = 0;
 		

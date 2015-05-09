@@ -2,19 +2,18 @@
 #define __CL_EXECTIVE_H__
 
 #include "CLStatus.h"
-#include "CLExecutiveFunctionProvider.h"
+#include "CLCoordinator.h"
+class CLCoordinator;
 
 class CLExecutive {
 	public:
-		explicit CLExecutive(CLExecutiveFunctionProvider* pExecutiveFunctionProvider);
+		explicit CLExecutive(CLCoordinator* pCoordinator):m_pCoordinator(pCoordinator) {};
 		virtual ~CLExecutive();
-		
 		virtual CLStatus Run(void *pContext = 0) = 0;
 		virtual CLStatus WaitForDeath() = 0;
 		
 	protected:
-		CLExecutiveFunctionProvider* m_pExecutiveFunctionProvider;
-		
+		CLCoordinator *m_pCoordinator;
 };
 
 #endif

@@ -4,8 +4,8 @@
 #include "CLStatus.h"
 class CLExecutiveFunctionProvider {
 	public:
-		CLExecutiveFunctionProvider();
-		virtual ~CLExecutiveFunctionProvider();
+		//CLExecutiveFunctionProvider();
+		//virtual ~CLExecutiveFunctionProvider();
 		virtual CLStatus RunExecutiveFunction(void* pContext) = 0;
 };
 

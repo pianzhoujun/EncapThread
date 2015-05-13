@@ -4,7 +4,7 @@ CLStatus CLEvent::Set()
 {
 	try {
 		CLCriticalSection cs(&m_Cond);
-		m_flag = 1;
+		++m_flag;
 	}
 	catch (const char *s){
 		return CLStatus(-1 , 0);
@@ -19,6 +19,12 @@ CLStatus CLEvent::Wait(CLMutex *pMutex)
 		CLCriticalSection cs(&m_Mutex);
 		while (m_flag == 0) {
 			Cond.Wait(&m_Mutex);
+		}
+		if (m_bSemaphore) {
+			m_flag --;	
+		}
+		else {
+			m_flag = 0;
 		}
 	}
 	catch (const char *s) {

@@ -1,9 +1,14 @@
 #ifndef __CL_MESSAGE_LOOP_MANAGER_FOR_STL_QUENE_H__
 #define __CL_MESSAGE_LOOP_MANAGER_FOR_STL_QUENE_H__
 #include "CLMessageQueneBySTLqQuene.h"
-class CLMessageLoopManagerForSTLquene: public CLMessageLoopManagerF {
+#include "CLMessageLoopManager.h"
+class CLMessageLoopManagerForSTLquene: public CLMessageLoopManager {
 	public:
-		CLMessageQueneBySTLqQuene(CLMessageQueneBySTLqQuene* pMessageQuene):
+#if 0
+		CLMessageQueneBySTLqQuene(CLMessageQueneBySTLqQuene* pMessageQuene , CLMessageOberver* pMsgOberver):
+			m_pMessageQuene(pMessageQuene), m_pMessageObserver(pMsgOberver){}
+#endif
+		CLMessageQueneBySTLqQuene(CLMessageQueneBySTLqQuene *pMessageQuene):
 			m_pMessageQuene(pMessageQuene){}
 		~CLMessageQueneBySTLqQuene(){
 			while (true) {

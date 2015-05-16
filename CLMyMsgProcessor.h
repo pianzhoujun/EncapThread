@@ -1,10 +1,12 @@
 #ifndef __CL_MY_PROCESSOR_H__
 #define __CL_MY_PROCESSOR_H__
 
-#include "CLMessageLoopManagerForSTLquene"
+//#include "CLMessageLoopManagerForSTLquene"
 #include "CLAddMessage.h"
-class CLMyMsgProcessor : public CLMessageLoopManagerForSTLquene {
+#include "CLMessageOberver.h"
+class CLMyMsgProcessor : public CLMessageOberver {
 	public:
+#if 0
 		virtual CLStatus DispatchMessage(CLMessage* pMessage){
 			CLAddMessage* pAddMsg;
 			switch (pMessage->m_clMsgID) {
@@ -15,6 +17,13 @@ class CLMyMsgProcessor : public CLMessageLoopManagerForSTLquene {
 				default:
 					break;
 			}
+		}
+#endif
+		virtual CLStatus Initialize(void *pContext) {
+			return CLStatus(0 , 0);
+		}
+		virtual CLStatus Notify(CLMessage *pMsg){
+			return CLStatus(0 , 0);
 		}
 };
 

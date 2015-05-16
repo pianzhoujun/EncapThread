@@ -6,6 +6,12 @@ class CLMessageLoopManagerForSTLquene: public CLMessageLoopManagerF {
 		CLMessageQueneBySTLqQuene(CLMessageQueneBySTLqQuene* pMessageQuene):
 			m_pMessageQuene(pMessageQuene){}
 		~CLMessageQueneBySTLqQuene(){
+			while (true) {
+				CLMessage* pMsg = Pop();
+				if (pMsg == NULL)
+					break;
+				delete pMsg;
+			}
 			if (m_pMessageQuene)
 				delete m_pMessageQuene;
 		}

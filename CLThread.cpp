@@ -24,6 +24,7 @@ CLStatus CLThread::WaitForDeath()
                 CLLogger::WriteLogMsg("In CLTread::WaitForDeath(),pthread_join error",r);
                 return CLStatus(-1 , 0);
         }
+	delete this;
 }
 
 void* CLThread::StartFunctionOfThread(void* pThis)

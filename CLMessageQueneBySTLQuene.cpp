@@ -23,3 +23,9 @@ CLMessage* CLMessageQueneBySTLQuene::Pop()
 	m_MessageQuene.pop();
 	return p;
 }
+
+CLMessage* CLMessageQueneBySTLQuene::Push(CLMessage* pMessage)
+{
+	CLCriticalSection cs(&m_Mutex);
+	m_MessageQuene.push(pMessage);
+}

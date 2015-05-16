@@ -24,7 +24,6 @@ class CLMessageQueneBySTLQuene {
 		std::quene<CLMessage*> m_MessageQuene;
 		CLMutex m_Mutex;
 		CLEvent m_Event;
-		
 };
 
 #endif
